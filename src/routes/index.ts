@@ -1,0 +1,10 @@
+export { aboutRoute } from "./About/route";
+export { exampleRoute } from "./Example/route";
+export { example2Route } from "./Example2/route";
+export { loginRoute } from "./Login/route";
+export { logoutRoute } from "./Logout/route";
+export { notFoundRoute } from "./NotFound/route";
+export { profileRoute } from "./Profile/route";
+export { projectsRoute } from "./Projects/route";
+export { registerRoute } from "./Register/route";
+export { rootRoute } from "./Root/route";
