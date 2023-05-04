@@ -1,21 +1,7 @@
 import SearchIcon from "@mui/icons-material/Search";
 import BottomNavigation, { BottomNavigationProps } from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import { Link, useRouter } from "@tanstack/router";
-
-function calculateValue(path: string) {
-  if (path.match(/project\/\d+\/search.*/i)) {
-    return 0;
-  } else if (path.match(/project\/\d+\/annotation.*/i)) {
-    return 1;
-  } else if (path.match(/project\/\d+\/analysis.*/i)) {
-    return 2;
-  } else if (path.match(/project\/\d+\/logbook.*/i)) {
-    return 3;
-  } else if (path.match(/project\/\d+\/autologbook.*/i)) {
-    return 4;
-  }
-}
+import { Link } from "@tanstack/router";
 
 export function BottomNavigationBar(props: Omit<BottomNavigationProps, "showLabels" | "value">) {
   return (
