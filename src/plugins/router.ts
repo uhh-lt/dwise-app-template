@@ -20,10 +20,8 @@ const routeTree = rootRoute.addChildren([
   registerRoute,
   logoutRoute,
   aboutRoute,
-  requireAuthLayoutRoute.addChildren([
-    topBottomNavigationLayoutRoute.addChildren([exampleRoute, example2Route, profileRoute]),
-    topNavigationLayoutRoute.addChildren([projectsRoute]),
-  ]),
+  topBottomNavigationLayoutRoute.addChildren([exampleRoute, example2Route, profileRoute]),
+  topNavigationLayoutRoute.addChildren([projectsRoute]),
   notFoundRoute,
 ]);
 

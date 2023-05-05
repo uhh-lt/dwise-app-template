@@ -9,6 +9,7 @@ OpenAPI.BASE = import.meta.env.VITE_SERVER || "";
 OpenAPI.TOKEN = localStorage.getItem(import.meta.env.VITE_AUTH_KEY || "_auth") || undefined;
 
 export function Root() {
+  OpenAPI.TOKEN = localStorage.getItem(import.meta.env.VITE_AUTH_KEY || "_auth") || undefined;
   return (
     <>
       <Outlet />
