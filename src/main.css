@@ -1,0 +1,18 @@
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.flexContainer .fixedContent {
+  flex: 0 0 auto;
+}
+
+.flexContainer .flexibleContent {
+  flex: 1 1 auto;
+}
+
+.flexContainer .flexibleContentScrollable {
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
