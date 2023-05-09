@@ -1,4 +1,3 @@
-import { SnackbarActions } from "@/components/Snackbar";
 import { ErrorMessage } from "@hookform/error-message";
 import AppRegistrationIcon from "@mui/icons-material/AppRegistration";
 import { LoadingButton } from "@mui/lab";
@@ -19,7 +18,7 @@ import {
 import { Link, useNavigate } from "@tanstack/router";
 import React, { useState } from "react";
 import { SubmitErrorHandler, SubmitHandler, useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
+import { toast } from "react-hot-toast";
 import { useRegisterMutation } from "./mutations";
 
 type RegisterFormValues = {
@@ -38,9 +37,6 @@ export function Register() {
     formState: { errors },
     watch,
   } = useForm<RegisterFormValues>();
-
-  // global client state - redux
-  const dispatch = useDispatch();
 
   // router
   const navigate = useNavigate();
@@ -71,15 +67,9 @@ export function Register() {
       },
       {
         onSuccess: () => {
-          dispatch(
-            SnackbarActions.show({
-              text: "Registration success! Redirecting to login...",
-              severity: "success",
-              duration: 1000,
-            })
-          );
+          toast.success("Registration success! Redirecting to login...", { duration: 1000 });
           setTimeout(() => {
-            navigate({ to: "/login", search: { from: undefined } });
+            navigate({ to: "/login" });
           }, 1000);
         },
       }

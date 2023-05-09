@@ -23,6 +23,7 @@
 - React Virtual [LINK](https://tanstack.com/virtual/v3)
 - React Hook Form [LINK](https://react-hook-form.com/)
 - React Hook Form - ErrorMessage [LINK](https://react-hook-form.com/api/useformstate/errormessage/)
+- React Hot Toast [LINK](https://react-hot-toast.com/)
 
 #### Other
 

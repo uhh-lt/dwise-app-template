@@ -1,7 +1,7 @@
 import { OpenAPI } from "@/api/openapi";
 import { SettingsDialog } from "@/components/Settings";
-import { SnackbarDialog } from "@/components/Snackbar";
 import { RouterDevtools } from "@/plugins/router";
+import { CustomToaster } from "@/plugins/toast";
 import { Outlet } from "@tanstack/router";
 
 // init OpenAPI
@@ -13,8 +13,8 @@ export function Root() {
   return (
     <>
       <Outlet />
+      <CustomToaster />
       {/* make dialogs available everywhere */}
-      <SnackbarDialog />
       <SettingsDialog />
 
       <RouterDevtools />
