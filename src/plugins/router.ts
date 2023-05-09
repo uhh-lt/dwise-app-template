@@ -1,6 +1,7 @@
-import { requireAuthLayoutRoute, topBottomNavigationLayoutRoute, topNavigationLayoutRoute } from "@/layouts";
+import { topBottomNavigationLayoutRoute, topNavigationLayoutRoute } from "@/layouts";
 import {
   aboutRoute,
+  example2Route,
   exampleRoute,
   loginRoute,
   logoutRoute,
@@ -9,7 +10,6 @@ import {
   projectsRoute,
   registerRoute,
   rootRoute,
-  example2Route,
 } from "@/routes";
 import { Router } from "@tanstack/router";
 import React from "react";

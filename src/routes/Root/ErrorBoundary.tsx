@@ -1,17 +1,26 @@
-import { Box, Button, Container, Typography } from "@mui/material";
+import { Container, Typography, Box, Button } from "@mui/material";
 import { Link } from "@tanstack/router";
 
-export function NotFound() {
+export function ErrorBoundary({ error, info }: { error: Error; info: { componentStack: string } }) {
   return (
     <Container maxWidth="md">
       <Typography variant={"h3"} gutterBottom mt={3} textAlign="center">
-        Whoops!
+        {error.message}
       </Typography>
-      <Typography variant={"h5"} gutterBottom mt={3} textAlign="center">
-        404 Page Not Found
-      </Typography>
+      <code
+        style={{
+          maxHeight: "50vh",
+          overflow: "auto",
+          display: "block",
+          border: "1px solid #ccc",
+          borderRadius: "4px",
+        }}
+      >
+        {info.componentStack}
+      </code>
+
       <Typography variant={"body1"} gutterBottom mt={3} textAlign="center">
-        We can't find the page you're looking for. Go back to projects?
+        Sorry for the inconvenience! Go back to projects?
       </Typography>
       <Box display="flex" mt={5}>
         <Button
